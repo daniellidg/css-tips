@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Tips —— mix-blend-mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style>
+      .blend {
+        width: 100vw;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .blend img {
+        position: absolute;
+        height: 300px;
+      }
+
+      .blend h1 {
+        font-size: 80px;
+        position: absolute;
+        color: #000;
+        mix-blend-mode: overlay;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><a href="./00index.html">Home</a></h2>
+    <h1>mix-blend-mode</h1>
+    <div class="blend">
+      <img
+        src="https://cdn.pixabay.com/photo/2016/12/11/12/02/bled-1899264_960_720.jpg"
+      />
+      <h1>NATURE</h1>
+    </div>
+  </body>
+</html>

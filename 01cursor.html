@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Tips —— cursor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style>
+      .wrapper-cursor {
+        display: flex;
+      }
+
+      .cursor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        margin: 0 10px;
+      }
+
+      .cursor-default {
+        background-color: red;
+      }
+
+      .cursor-image {
+        background-color: green;
+        cursor: url(./assets/arrow-down-circle.svg) 0 0, progress;
+      }
+
+      .cursor-emoji {
+        background-color: blue;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😀</text></svg>"),
+          pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><a href="./00index.html">Home</a></h2>
+    <h1>cursor</h1>
+    <div class="wrapper-cursor">
+      <div class="cursor cursor-default">Default</div>
+      <div class="cursor cursor-image">Image Cursor</div>
+      <div class="cursor cursor-emoji">Emoji Cursor</div>
+    </div>
+  </body>
+</html>

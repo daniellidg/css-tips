@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Tips —— transform-origin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style>
+      .wrapper {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+      }
+      .wrapper div {
+        position: absolute;
+        width: 20px;
+        height: 200px;
+        left: calc(200px - 10px);
+        text-align: center;
+        transform-origin: 50% 100%;
+      }
+
+      .wrapper div:nth-child(1) {
+        transform: rotate(0);
+        background-color: rgba(0, 255, 0, 0.5);
+      }
+      .wrapper div:nth-child(2) {
+        transform: rotate(90deg);
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .wrapper div:nth-child(3) {
+        transform: rotate(180deg);
+        background-color: rgba(0, 0, 255, 0.5);
+      }
+      .wrapper div:nth-child(4) {
+        transform: rotate(270deg);
+        background-color: rgba(255, 255, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h2><a href="./00index.html">Home</a></h2>
+    <h1>transform-origin</h1>
+    <div class="wrapper">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+    </div>
+  </body>
+</html>

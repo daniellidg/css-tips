@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSS Tips —— :target</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+
+    <style>
+      .modal {
+        position: absolute;
+        height: 100vh;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.2s;
+      }
+
+      .modal:target {
+        visibility: visible;
+      }
+
+      .modal__content {
+        position: relative;
+        width: 500px;
+        max-width: 90%;
+        border-radius: 4px;
+        background: #fff;
+        padding: 2em 2em 1rem;
+        color: #000;
+      }
+
+      .modal__header {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      .modal__footer {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      .modal__close {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: 18px;
+        color: #585858;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><a href="./00index.html">Home</a></h2>
+    <h1>:target</h1>
+    <div>
+      <a href="#demo-modal">Open Modal</a>
+
+      <div id="demo-modal" class="modal">
+        <div class="modal__content">
+          <div class="modal__header">Modal Header</div>
+          <div class="modal__body">
+            Modal Body
+            <p>
+              You can use the :target pseudo-class to create a modals with Zero
+              JavaScript. Enjoy!
+            </p>
+          </div>
+          <div class="modal__footer">Footer</div>
+          <a href="#" class="modal__close">X</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // When the user clicks anywhere outside of the modal, close it
+
+      var modal = document.getElementById("demo-modal");
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          location.href = "#";
+        }
+      };
+    </script>
+  </body>
+</html>
